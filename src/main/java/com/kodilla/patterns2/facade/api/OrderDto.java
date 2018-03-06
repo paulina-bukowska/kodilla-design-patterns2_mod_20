@@ -16,4 +16,11 @@ public class OrderDto {
     public void addItem(final ItemDto itemDto) {
         items.add(itemDto);
     }
+
+    @Override
+    public String toString() {
+        return "OrderDto{" +
+                "items=" + items +
+                '}';
+    }
 }
