@@ -17,7 +17,7 @@ public class SalaryAdapter extends SalaryAdaptee implements SalaryCalculator {
     @Override
     public double totalSalary(String[][] workers, double[] salaries) {
         List<Employee> employeeList = Stream
-                .iterate(1, n -> n + 1)
+                .iterate(0, n -> n + 1)
                 .limit(salaries.length)
                 .map(n -> new Employee(workers[n][0], workers[n][1], workers[n][2], new BigDecimal(salaries[n])))
                 .collect(Collectors.toList());
